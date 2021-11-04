@@ -254,7 +254,7 @@ body {
 .post {
     background: #fafcff;
     min-width: 200px;
-    min-width: 400px;
+    max-width: 400px;
     min-height: 325px;
     max-height: 450px;
     border-radius: 25px;

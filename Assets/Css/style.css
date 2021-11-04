@@ -253,9 +253,7 @@ body {
 }
 .post {
     background: #fafcff;
-    min-width: 200px;
     min-width: 400px;
-    min-height: 325px;
     max-height: 450px;
     border-radius: 25px;
     margin: 50px;
@@ -1040,6 +1038,7 @@ html.remodal-is-locked {
   .miyaro-content-nav {
     width: 1000px;
     height: 700px;
+    background: #fff;
   }
   .miyaro-content-nav-guidelines {
     width: 840px;
@@ -1063,7 +1062,10 @@ html.remodal-is-locked {
     display: inline;
   }
   .post {
-    margin: 50px;
+    margin: 5%;
+    min-width:300px;
+    min-height: 200px;
+    max-height: 300px;
   }
 }
 @media (max-width: 800px) {

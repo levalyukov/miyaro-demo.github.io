@@ -146,6 +146,7 @@ body {
     height: 800px;
     margin: 25px 10px 0 10px;
     border-radius: 25px;
+    border: 25px solid #fff;
 }
 .br {
     margin-top: 50px;

@@ -1062,6 +1062,7 @@ html.remodal-is-locked {
     display: inline;
   }
   .post {
+    height: 400px;
     margin: 75px 50px 100px 45px;
   }
 }

@@ -1,6 +1,8 @@
 * {
     margin: 0;
     padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
     text-decoration: none;
@@ -8,7 +10,6 @@
 body {
     background: #f1f4f9;
 }
-  
 ::-webkit-scrollbar {
     width: 0px;
 }
@@ -23,6 +24,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 .miyaro_header_logo {
     display: flex;
@@ -42,6 +45,23 @@ body {
     color: #b2bdce;
     transform: translateX(-125px);
     box-shadow: 0px 1px 5px rgba(0,0,0,0.1);
+  }
+  .content_block {
+    overflow: hidden;
+    position: relative;    
+  }
+  .content_block.hide {
+    height: 300px;
+  }
+  .content_block.hide:after{
+    content: "";
+    display: block;
+    height: 100px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), #fff 75%)
   }
   .search-input input{
     height: 40px;
@@ -171,7 +191,6 @@ body {
     border-radius: 50px;
     background: #eff2ff;
     color: #5865F2;
-    width: 100%;
 }
 .link.is-active {
   border-radius: 50px;
@@ -268,9 +287,8 @@ body {
 
 .post img {
     display: block;
-    margin-top: 25px;
-    margin-left: 25px;
-    height: 60px;
+    margin: 2%;
+    height: 70px;
     border-radius: 50%;
 }
 .official {
@@ -286,18 +304,20 @@ body {
 .post h2 {
     transform: translateX(100px) translateY(-55px);
     font-family: 'Roboto', sans-serif;
+    display: block;
 }
 .data {
     transform: translateX(20px) translateY(-30px);
     font-family: 'Roboto', sans-serif;
-    font-size: 15px;
     color: #b2bdce;
+    font-size: 18px;
 }
 .post h3 {
     color: #b2bdce;
     font-size: 18px;
     font-family: 'Montserrat', sans-serif;
-    margin-bottom: 50px;
+    margin-top: -25px;
+    margin-bottom: 25px;
     font-weight: 600;
 }
 .post.is-active {
@@ -427,12 +447,14 @@ h5{
     border-radius: 25px;
     color: #b2bdce;
     overflow-y: scroll;
-    border: 50px solid #fff
+    border: 50px solid #fff;
+    flex-wrap: wrap;
 }
 .miyaro-content-guidelines-header h1{
     padding: 25px;
     font-size: 40px;
     font-weight: 900;
+    color: #677485;
 }
 .miyaro-content-guidelines-content h2{
     padding: 25px;
@@ -1032,45 +1054,84 @@ html.remodal-is-locked {
     display: none;
   }
   .miyaro_header {
+    width: 100%;
     padding-bottom: 25px;
     padding-top: 15px;
   }
   .miyaro-content-nav {
     width: 1000px;
-    height: 700px;
+    min-height: 700px;
     background: #fff;
   }
-  .miyaro-content-nav-guidelines {
-    width: 840px;
-    margin-left: -50px;
+  .mobile-nav {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: #fff;
+    transition: .2s;
+    display: flex;
+    align-items: center;
+    justify-content:center;
   }
   .mobile-menu {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     z-index: 3;
     position: fixed;
     left: 0; bottom: 0;
-    padding: 30px; 
+    padding: 30px;
     background: white; 
-    color: #8592a3; 
     border-top: 10px solid #f1f4f9;
     width: 100%; 
   }
-  .mobile-menu a {
-    margin: 0 10px 0 10px;
-  }
-  .mobile-nav {
-    display: inline;
-  }
   .post {
-    margin: 5%;
+    margin: auto;
     min-width:200px;
     min-height: 200px;
     max-height: 300px;
   }
 }
 @media (max-width: 800px) {
+  .miyaro_header {
+    display: none;
+  }
+  .miyaro-content-guidelines {
+    margin-top: 50px;
+    background: #fff;
+    width: 98%;
+    height: 800px;
+    border-radius: 25px;
+    color: #b2bdce;
+    overflow-y: scroll;
+    border: 10px solid #fff
+  }
   .miyaro-content-nav {
     width: 1000px;
     height: 500px;
+  }
+  .data {
+    font-size: 15px !important;
+  }
+  .name-category-account {
+    margin-top: -7px;
+  }
+  .post h2 {
+    transform: translateX(90px) translateY(-55px);
+    font-family: 'Roboto', sans-serif;
+    display: block;
+    font-size: 20px;
+  }
+  .mobile-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+    position: fixed;
+    left: 0; bottom: 0;
+    padding: 5px;
+    background: white; 
+    border-top: 10px solid #f1f4f9;
+    width: 100%; 
   }
 } 

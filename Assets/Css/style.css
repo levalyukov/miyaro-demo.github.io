@@ -10,6 +10,9 @@
 body {
     background: #f1f4f9;
 }
+::selection {
+  color: #5865F2;
+}  
 ::-webkit-scrollbar {
     width: 0px;
 }
@@ -1095,6 +1098,15 @@ html.remodal-is-locked {
 @media (max-width: 800px) {
   .miyaro_header {
     display: none;
+  }
+  .miyaro-content-guidelines-header h1 {
+    font-size: 30px;
+  }
+  .miyaro-content-guidelines-content  {
+    font-size: 15px;
+  }
+  .miyaro-content-guidelines-content-bold-2 {
+    font-size: 25px;
   }
   .miyaro-content-guidelines {
     margin-top: 50px;
